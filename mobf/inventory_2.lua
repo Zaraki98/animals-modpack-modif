@@ -17,9 +17,6 @@
 --! @{
 --
 -- Contact sapier a t gmx net
-
-dofile (mobf_modpath .. "/inventory.lua")
-
 -------------------------------------------------------------------------------
 mobf_assert_backtrace(mob_inventory_2 == nil)
 --! @class mob_inventory_2
