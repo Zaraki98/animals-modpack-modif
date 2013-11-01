@@ -53,7 +53,7 @@ Il faut 3 blocs d'acier pour faire une pioche :
 Donc (1 / 8) / 0.04 : 3.125 (valeur ajoutée)
 
 ******************************************
-*On peut ramener le prix d'un cobble à 3€*
+*On peut ramener le prix d'un cobble à 3€*
 ******************************************
 
 Prix si un bloc de cobble rapporte 3€
@@ -62,7 +62,7 @@ Prix si un bloc de cobble rapporte 3€
 - mese : 1350 *3 = 4050€
 - steel : 60 * 3 = 180€
 
-Avec le rapport de 0.04 et le nombre d'actions à effectuer pour le crafter, on peu définir le prix d'un objet. On peut également utiliser le prix des matières
+Avec le rapport de 0.04 et le nombre d'actions à effectuer pour le crafter, on peut définir le prix d'un objet. On peut également utiliser le prix des matières
 nobles si elles rentres dans la fabrication de l'objet !
 
 ***
@@ -206,7 +206,7 @@ minetest.register_craft({
 --|billet de 50|
 --++++++++++++++
 
---Déclaration
+--Declaration
 minetest.register_craftitem("argent:billet50", {
     description = " billet de 50",
     inventory_image = "billet50.png",
@@ -313,39 +313,4 @@ minetest.register_craft({
 })
 --[[
 **********************************************************************************************
-
-Machine à cash !
-Cube qui permet d'obtenir de l'argent ( pièce de 1 ) en échange de cobble
-]]--
-
-minetest.register_node("argent:cash", {
-	description = "Echangeur de cobble",
-	tiles = {"cash.png"},
-	is_ground_content = false,
-	walkable = true,
-	pointable = true,
-	diggable = false,
-	groups = {unbreakable=1},
-	drop = "argent:cash" ,
-	on_construct = function(pos)
-		local meta = minetest.get_meta(pos)
-		meta:set_string("formspec",
-				"size[5,2]"..
-				"label[0,0;Objets]"..
-				"label[2,0;Prix]"..
-				"item_image[0,1;1,1;argent:piece1]"..
-				"label[1,1.5;x3]"..
-				"item_image[2,1;1,1;default:cobble]"..
-				"label[3,1.5;x1]"..
-				"button[4,1;1,1;achat1;Achat]"
-				)
-		meta:set_string("infotext", "Block Cash")
-	end,
-	on_receive_fields = function(pos, formname, fields, sender)
-		if fields["achat1"]=="Achat" and sender:get_inventory():contains_item("main", "default:cobble") then
-			sender:get_inventory():add_item('main', 'argent:piece1 3' )
-			sender:get_inventory():remove_item('main', 'default:cobble')
-		end
-		return true
-	end,
-})
+--]]

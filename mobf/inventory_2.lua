@@ -17,6 +17,9 @@
 --! @{
 --
 -- Contact sapier a t gmx net
+
+dofile (mobf_modpath .. "/inventory.lua")
+
 -------------------------------------------------------------------------------
 mobf_assert_backtrace(mob_inventory_2 == nil)
 --! @class mob_inventory_2
@@ -353,8 +356,8 @@ end
 function mob_inventory_2.init_trader_inventory_2(entity)
 	--TODO find out why calling "tostring" is necessary?!
 	local tradername       = tostring(
-		entity.data.trader_inventory.random_names[
-		math.random(1,#entity.data.trader_inventory.random_names)])
+		entity.data.trader_inventory_2.random_names[
+		math.random(1,#entity.data.trader_inventory_2.random_names)])
 	dbg_mobf.trader_inv_lvl3(
 		"MOBF: randomly selected \"" .. tradername .. "\" as name")
 	local unique_entity_id = string.gsub(tostring(entity),"table: ","")
