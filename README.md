@@ -10,36 +10,149 @@ Big thanks to rinoux for providing graphics and all others for their
 suggestions too!
 -------------------------------------------------------------------------------
 
-Documentation:
-https://github.com/sapier/animals_modpack/wiki/User-documentation
 
-FAQ:
-https://github.com/sapier/animals_modpack/wiki/Frequently-asked-questions
+No what is in?
+-------------------------------------------------------------------------------
+
+--hostile mobs--
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  Vombies
+	Hostile mobs spawning at night in unlighted areas. They can't withstand the 
+	sun and will burn as sun rises
+	
+	Dungeonmasters
+	Just dungenmasters throwing fireballs they spawn in dark stony areas too.
+	
+	Big Red
+	Beware of their plasma balls! Big red
+	spawns in dark stony areas
+	
+	Boombomb
+	Don't get near they will explode
+	
+	Slime
+	will bounce in large caves below surface
+	
+	Oerkki
+	will attack you underground
+
+--semi hostile mobs --
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	Wolf
+	A animal hiding in the woods that can be tamed to follow you
+
+--friendly mobs --
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	Chicken
+	Cicken droping egs now and then
+	
+	Sheep
+	Sheep that can be sheered, their wool will grow again. They randomly will 
+	spawn on willows
+	
+	Cow
+	Cows will spawn on willows and produce milk.
+	
+	Deer
+	Will spawn below trees.
+	
+	Rat 
+	Just a small animal jumping around
+	
+	Blue White Fish
+	Just a swimming animal
+	
+	Gull
+	flys around over your head!
+	
+	Clownfish
+	A funny small quick fish swiming around
+	
+	Ostrich
+
+--npc--
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	Trader
+	will sell goods
+	
+	Archer
+	Shoots arrows to enemys
+	
+	Guard
+	defends his place
+
+
+What can you do with them?
+-------------------------------------------------------------------------------
+
+Sheep      -> take scissors and sheer them
+Cow        -> take an empty glass and get milk
+Chicken    -> collect eggs
+Vombie     -> drops bone on kill
+Clownfish  -> drops golden scale on kill
+Wolf       -> tame it!
+NPC trader -> trading of course
+Oerkki     -> ride
+
+How to catch mobs? Take a lasso or net to catch them, create a farm. Sheep,
+chicken and cow will even breed if there's a filled barn nearby
+
+
+Recieps:
+-------------------------------------------------------------------------------
+
+Lasso
+
+none  wool  none
+wool  none  wool
+none  wool  none
+
+Scissors
+
+none  iron_ingot none
+none  iron_ingot none
+stick    none    stick
+
+Net
+
+wool  none  wool
+none  wool  none
+wool  none  wool
+
+Barn
+
+stick stick stick
+wood  wood  wood
+
+Small barn
+
+stick stick
+wood  wood
+
+Vombie trap
+
+wood       wood     wood
+wood  scale_golden  wood
+wood       wood     wood
+
+Saddle
+
+<no reciep>
+
+Contract
+
+paper
+paper
+
+
+Settings: 
+-------------------------------------------------------------------------------
+call /mobf_settings in game 
+(you need to be singleplayer or have priv mobf_admin)
+
 
 Changelog:
 -------------------------------------------------------------------------------
-Changes 2.2.2
--Fix crash without factions mod
-
-Changes 2.2.1
--Fix typo in plant environment definition
--Fix crash in plasma- and fireball damage handling
-
-Changes 2.2
--Fix doxygen documentation
--Improve spawn algorithms to avoid spawning within existing mobs
--Fix wolfs not attacking player
--Add support for new minetest game nodes
--Fix varios other small bugs (see github commit list)
-
-Changes 2.1.85
--Faction support
--Updated mobf menu
--Improved probabilistic movement gen
--Asynchronous mob spawning
--additional secondary spawners
--Fixed lots of bugs
-
 Changes 2.1.2
 -fix crash when trying to get name from non entity fight target
 -make sure only players and luaentitys can be set as attack target
@@ -103,7 +216,7 @@ Changes 2.0.80
 -add support for flee state for non agressive mobs
 -NEW MOB oerkki
 -add attention support 
-	(player or other mobs now will draw attention to agressive mobs once some 
+  (player or other mobs now will draw attention to agressive mobs once some 
 	 threshold is exceeded a mob may look at you or even start an attack)
 -make all new gui's available from mobf_settings "Tools" page
 
@@ -411,51 +524,6 @@ Changes 1.2.0:
 -added sound support
 -(non working) path based movement gen stub
 
-Changes 1.1.0:
--support for prefered environment
--performance improvements (mainly in spawning algorithms)
--internal reorganization
--added on_hit_callback and on_kill_callback in fighting subsystem
-
-Changes 1.0.0:
--added changes required for flying animals
--added lifetime support (it's only used for breeding right now)
--for any animal a item is created by default
--added gull
--added clownfish
--added vombie trap
--added barn (breed sheep!)
-
-Changes 0.9.11:
--animal definitions have been moved to different mods
--player punch pushes back animal
-
-Changes 0.9.9:
--MAJOR code reorganization
--fixed creeper
--added collision boxes with correct height 
-(width ain't possible as sprites are rotated automaticaly)
--added some missing item graphics
--fixed a lot of small bugs probably not even discovered
--improoved big red graphic
--added initial documentation
-
-Changes 0.9.0:
--changed harvesting to LMB
--fixed bug making rats jump to high
--adjusted to new git 20120122
--make dungeon master more dangerous
--added glass for harvesting milk
-
-Changes 0.8.9:
--added net
--added fish support
--added rat
-
-Changes 0.8.3:
--added creeper
--added movement pattern support -> support for different movement styles
--added lua script "remove_animals.lua" (rename to init.lua to remove all animals from your world)
 
 Changes 0.8.2:
 -added cow graphics from rinoux
